@@ -1,0 +1,82 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Level.gd" type="Script" id=1]
+[ext_resource path="res://Light2DMoon.tscn" type="PackedScene" id=2]
+[ext_resource path="res://TypeWriter.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Family.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Me.tscn" type="PackedScene" id=5]
+[ext_resource path="res://TileSet.tres" type="TileSet" id=6]
+[ext_resource path="res://BulletTower.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Goal.tscn" type="PackedScene" id=8]
+
+[node name="Node" type="Node2D"]
+
+script = ExtResource( 1 )
+description = null
+
+[node name="Light2DMoon" parent="." index="0" instance=ExtResource( 2 )]
+
+[node name="description" parent="." index="1" instance=ExtResource( 3 )]
+
+margin_left = 32.0
+margin_top = 32.0
+margin_right = 480.0
+margin_bottom = 128.0
+bbcode_enabled = true
+bbcode_text = "I witnessed you growing up in front of me, knowing when to slow down to study the situation, to reflect and then go on, with more clear objectives in mind.."
+text = "I witnessed you growing up in front of me, knowing when to slow down to study the situation, to reflect and then go on, with more clear objectives in mind.."
+_sections_unfolded = [ "BBCode", "Rect", "custom_colors", "custom_fonts" ]
+translation_key = "DSC_LVL_23"
+
+[node name="family" parent="." index="2" instance=ExtResource( 4 )]
+
+position = Vector2( 128, 272 )
+family_members = [ "bro" ]
+
+[node name="me" parent="." index="3" instance=ExtResource( 5 )]
+
+position = Vector2( 200, 280 )
+
+[node name="TileMap" type="TileMap" parent="." index="4"]
+
+mode = 0
+tile_set = ExtResource( 6 )
+cell_size = Vector2( 16, 16 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( 31, 19, 0, 33, 19, 0, 65567, 19, 0, 65569, 19, 0, 131103, 19, 0, 131105, 19, 0, 196639, 20, 0, 196641, 20, 0, 1179648, 21, 0, 1179649, 22, 0, 1179650, 22, 0, 1179651, 22, 0, 1179652, 22, 0, 1179653, 22, 0, 1179654, 22, 0, 1179655, 22, 0, 1179656, 22, 0, 1179657, 22, 0, 1179658, 22, 0, 1179659, 22, 0, 1179660, 22, 0, 1179661, 22, 0, 1179662, 22, 0, 1179663, 22, 0, 1179664, 22, 0, 1179665, 22, 0, 1179666, 22, 0, 1179667, 22, 0, 1179668, 22, 0, 1179669, 22, 0, 1179670, 22, 0, 1179671, 22, 0, 1179672, 22, 0, 1179673, 22, 0, 1179674, 22, 0, 1179675, 22, 0, 1179676, 22, 0, 1179677, 22, 0, 1179678, 22, 0, 1179679, 22, 0, 1179680, 22, 0, 1179681, 22, 0, 1179682, 22, 0, 1179683, 22, 0, 1179684, 22, 0, 1179685, 22, 0, 1179686, 22, 0, 1179687, 22, 0, 1179688, 22, 0, 1179689, 22, 0, 1179690, 22, 0, 1179691, 22, 0, 1179692, 22, 0, 1179693, 22, 0, 1179694, 22, 0, 1179695, 22, 0, 1179696, 22, 0, 1179697, 22, 0, 1179698, 22, 0, 1179699, 22, 0, 1179700, 22, 0, 1179701, 22, 0, 1179702, 22, 0, 1179703, 22, 0, 1179704, 22, 0, 1179705, 22, 0, 1179706, 22, 0, 1179707, 22, 0, 1179708, 22, 0, 1179709, 22, 0, 1179710, 22, 0, 1179711, 23, 0 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="BulletTower7" parent="TileMap" index="0" instance=ExtResource( 7 )]
+
+position = Vector2( 8, 280 )
+TIME_FIRE = 1.5
+type = "normal"
+
+[node name="BulletTower8" parent="TileMap" index="1" instance=ExtResource( 7 )]
+
+position = Vector2( 520, 56 )
+TIME_FIRE = 0.5
+N_BULLET = 5
+TIME_WAIT = 0.5
+direction = Vector2( 0, 1 )
+type = "normal"
+
+[node name="goal" parent="." index="5" instance=ExtResource( 8 )]
+
+position = Vector2( 984, 280 )
+
+

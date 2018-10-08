@@ -1,0 +1,74 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Level.gd" type="Script" id=1]
+[ext_resource path="res://Light2DMoon.tscn" type="PackedScene" id=2]
+[ext_resource path="res://TypeWriter.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Family.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Me.tscn" type="PackedScene" id=5]
+[ext_resource path="res://TileSet.tres" type="TileSet" id=6]
+[ext_resource path="res://Goal.tscn" type="PackedScene" id=7]
+
+[node name="Node" type="Node2D" index="0"]
+
+script = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
+description = null
+
+[node name="Light2DMoon" parent="." index="0" instance=ExtResource( 2 )]
+
+[node name="description" parent="." index="1" instance=ExtResource( 3 )]
+
+margin_left = 64.0
+margin_top = 16.0
+margin_right = 944.0
+margin_bottom = 96.0
+bbcode_enabled = true
+bbcode_text = "[color=#8a8a8a]Growing up I developed a sort of nostalgia..
+I feel it so strongly, at times.. 
+I wish I could live those family moments again.. Over and over.. 
+Until everything ends ..[/color]"
+text = "Growing up I developed a sort of nostalgia..
+I feel it so strongly, at times.. 
+I wish I could live those family moments again.. Over and over.. 
+Until everything ends .."
+_sections_unfolded = [ "BBCode", "Rect", "Theme", "custom_colors", "custom_fonts" ]
+translation_key = "DSC_LVL_30"
+
+[node name="family" parent="." index="2" instance=ExtResource( 4 )]
+
+position = Vector2( 32, 272 )
+family_members = [ "bro", "dad", "mom" ]
+
+[node name="me" parent="." index="3" instance=ExtResource( 5 )]
+
+position = Vector2( 8, 281 )
+
+[node name="TileMap" type="TileMap" parent="." index="4"]
+
+mode = 0
+tile_set = ExtResource( 6 )
+cell_size = Vector2( 16, 16 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( 458778, 18, 0, 524309, 9, 0, 524310, 22, 0, 524311, 22, 0, 524312, 22, 0, 524313, 22, 0, 524314, 17, 0, 589845, 19, 0, 655381, 19, 0, 655389, 21, 0, 655390, 22, 0, 655391, 22, 0, 655392, 22, 0, 655393, 22, 0, 655394, 11, 0, 720917, 19, 0, 720930, 19, 0, 786453, 15, 0, 786454, 22, 0, 786455, 22, 0, 786456, 22, 0, 786457, 22, 0, 786458, 23, 0, 786466, 19, 0, 786484, 21, 0, 786485, 23, 0, 852002, 19, 0, 917533, 9, 0, 917534, 22, 0, 917535, 22, 0, 917536, 22, 0, 917537, 22, 0, 917538, 17, 0, 917546, 21, 0, 917547, 22, 0, 917548, 22, 0, 917549, 22, 0, 917550, 22, 0, 917551, 22, 0, 917552, 22, 0, 917553, 23, 0, 983069, 20, 0, 1048588, 21, 0, 1048589, 22, 0, 1048590, 22, 0, 1048591, 22, 0, 1048592, 22, 0, 1048593, 23, 0, 1048597, 21, 0, 1048598, 22, 0, 1048599, 22, 0, 1048600, 22, 0, 1048601, 22, 0, 1048602, 23, 0, 1048628, 21, 0, 1048629, 22, 0, 1048630, 22, 0, 1048631, 22, 0, 1048632, 22, 0, 1048633, 22, 0, 1048634, 22, 0, 1048635, 23, 0, 1179648, 9, 0, 1179649, 10, 0, 1179650, 10, 0, 1179651, 10, 0, 1179652, 1, 0, 1179653, 1, 0, 1179654, 1, 0, 1179655, 1, 0, 1179656, 1, 0, 1179657, 1, 0, 1179658, 1, 0, 1179659, 1, 0, 1179660, 1, 0, 1179661, 1, 0, 1179662, 1, 0, 1179663, 1, 0, 1179664, 1, 0, 1179665, 1, 0, 1179666, 1, 0, 1179667, 1, 0, 1179668, 1, 0, 1179669, 1, 0, 1179670, 1, 0, 1179671, 1, 0, 1179672, 1, 0, 1179673, 1, 0, 1179674, 1, 0, 1179675, 1, 0, 1179676, 1, 0, 1179677, 1, 0, 1179678, 1, 0, 1179679, 1, 0, 1179680, 1, 0, 1179681, 1, 0, 1179682, 1, 0, 1179683, 1, 0, 1179684, 1, 0, 1179685, 1, 0, 1179686, 1, 0, 1179687, 1, 0, 1179688, 1, 0, 1179689, 1, 0, 1179690, 1, 0, 1179691, 1, 0, 1179692, 1, 0, 1179693, 1, 0, 1179694, 1, 0, 1179695, 1, 0, 1179696, 1, 0, 1179697, 1, 0, 1179698, 1, 0, 1179699, 1, 0, 1179700, 1, 0, 1179701, 1, 0, 1179702, 1, 0, 1179703, 1, 0, 1179704, 1, 0, 1179705, 1, 0, 1179706, 1, 0, 1179707, 1, 0, 1179708, 10, 0, 1179709, 10, 0, 1179710, 10, 0, 1179711, 11, 0, 1245184, 12, 0, 1245247, 14, 0 )
+_sections_unfolded = [ "Cell" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="goal" parent="." index="5" instance=ExtResource( 7 )]
+
+position = Vector2( 846, 182 )
+
+

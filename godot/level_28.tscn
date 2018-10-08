@@ -1,0 +1,67 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Level.gd" type="Script" id=1]
+[ext_resource path="res://Light2DMoon.tscn" type="PackedScene" id=2]
+[ext_resource path="res://TypeWriter.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Family.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Me.tscn" type="PackedScene" id=5]
+[ext_resource path="res://TileSet.tres" type="TileSet" id=6]
+[ext_resource path="res://Goal.tscn" type="PackedScene" id=7]
+
+[node name="Node" type="Node2D"]
+
+script = ExtResource( 1 )
+description = null
+
+[node name="Light2DMoon" parent="." index="0" instance=ExtResource( 2 )]
+
+[node name="description" parent="." index="1" instance=ExtResource( 3 )]
+
+margin_left = 496.0
+margin_top = 160.0
+margin_right = 976.0
+margin_bottom = 240.0
+bbcode_enabled = true
+bbcode_text = ".. when we travelled together in a car and everything, also the most annoying traffic jam, was part of a big adventure.."
+text = ".. when we travelled together in a car and everything, also the most annoying traffic jam, was part of a big adventure.."
+_sections_unfolded = [ "BBCode", "Rect", "Theme", "custom_colors", "custom_fonts" ]
+translation_key = "DSC_LVL_28"
+
+[node name="family" parent="." index="2" instance=ExtResource( 4 )]
+
+position = Vector2( 592, 272 )
+family_members = [ "bro", "dad", "mom" ]
+
+[node name="me" parent="." index="3" instance=ExtResource( 5 )]
+
+position = Vector2( 568, 280 )
+
+[node name="TileMap" type="TileMap" parent="." index="4"]
+
+mode = 0
+tile_set = ExtResource( 6 )
+cell_size = Vector2( 16, 16 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( 262150, 21, 0, 262151, 22, 0, 262152, 22, 0, 262153, 22, 0, 262154, 22, 0, 262155, 22, 0, 262156, 22, 0, 262157, 23, 0, 393232, 21, 0, 393233, 22, 0, 393234, 22, 0, 393235, 22, 0, 393236, 22, 0, 393237, 22, 0, 393238, 22, 0, 393239, 23, 0, 393243, 21, 0, 393244, 22, 0, 393245, 22, 0, 393246, 22, 0, 393247, 22, 0, 393248, 23, 0, 393252, 21, 0, 393253, 22, 0, 393254, 22, 0, 393255, 22, 0, 393256, 22, 0, 393257, 23, 0, 393261, 21, 0, 393262, 22, 0, 393263, 22, 0, 393264, 22, 0, 393265, 22, 0, 393266, 23, 0, 393270, 21, 0, 393271, 22, 0, 393272, 22, 0, 393273, 22, 0, 393274, 22, 0, 393275, 23, 0, 393279, 21, 0, 524292, 21, 0, 524293, 22, 0, 524294, 22, 0, 524295, 22, 0, 524296, 22, 0, 524297, 22, 0, 524298, 22, 0, 524299, 22, 0, 524300, 22, 0, 524301, 23, 0, 655376, 21, 0, 655377, 22, 0, 655378, 22, 0, 655379, 22, 0, 655380, 22, 0, 655381, 22, 0, 655382, 22, 0, 655383, 22, 0, 655384, 22, 0, 655385, 23, 0, 786434, 21, 0, 786435, 22, 0, 786436, 22, 0, 786437, 22, 0, 786438, 22, 0, 786439, 22, 0, 786440, 22, 0, 786441, 22, 0, 786442, 22, 0, 786443, 22, 0, 786444, 22, 0, 786445, 23, 0, 852030, 9, 0, 852031, 22, 0, 917520, 21, 0, 917521, 22, 0, 917522, 22, 0, 917523, 22, 0, 917524, 22, 0, 917525, 22, 0, 917526, 22, 0, 917527, 22, 0, 917528, 22, 0, 917529, 22, 0, 917530, 22, 0, 917531, 23, 0, 917566, 19, 0, 983102, 15, 0, 983103, 22, 0, 1048576, 21, 0, 1048577, 22, 0, 1048578, 22, 0, 1048579, 22, 0, 1048580, 22, 0, 1048581, 22, 0, 1048582, 22, 0, 1048583, 22, 0, 1048584, 22, 0, 1048585, 22, 0, 1048586, 22, 0, 1048587, 22, 0, 1048588, 22, 0, 1048589, 23, 0, 1179661, 9, 0, 1179662, 10, 0, 1179663, 10, 0, 1179664, 1, 0, 1179665, 1, 0, 1179666, 1, 0, 1179667, 1, 0, 1179668, 1, 0, 1179669, 1, 0, 1179670, 1, 0, 1179671, 1, 0, 1179672, 1, 0, 1179673, 1, 0, 1179674, 1, 0, 1179675, 1, 0, 1179676, 1, 0, 1179677, 1, 0, 1179678, 1, 0, 1179679, 1, 0, 1179680, 1, 0, 1179681, 1, 0, 1179682, 1, 0, 1179683, 10, 0, 1179684, 10, 0, 1179685, 10, 0, 1179686, 1, 0, 1179687, 1, 0, 1179688, 1, 0, 1179689, 1, 0, 1179690, 1, 0, 1179691, 1, 0, 1179692, 1, 0, 1179693, 1, 0, 1179694, 1, 0, 1179695, 1, 0, 1179696, 1, 0, 1179697, 1, 0, 1179698, 1, 0, 1179699, 1, 0, 1179700, 1, 0, 1179701, 1, 0, 1179702, 1, 0, 1179703, 1, 0, 1179704, 1, 0, 1179705, 1, 0, 1179706, 1, 0, 1179707, 1, 0, 1179708, 1, 0, 1179709, 1, 0, 1179710, 10, 0, 1179711, 11, 0, 1245197, 12, 0, 1245247, 14, 0 )
+_sections_unfolded = [ "Cell" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="goal" parent="." index="5" instance=ExtResource( 7 )]
+
+position = Vector2( 1016, 93 )
+
+
