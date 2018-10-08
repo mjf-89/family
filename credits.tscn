@@ -1,0 +1,497 @@
+[gd_scene load_steps=23 format=2]
+
+[ext_resource path="res://credits.gd" type="Script" id=1]
+[ext_resource path="res://Light2DMoon.tscn" type="PackedScene" id=2]
+[ext_resource path="res://TileSet.tres" type="TileSet" id=3]
+[ext_resource path="res://walk_bro_0.png" type="Texture" id=4]
+[ext_resource path="res://walk_bro_1.png" type="Texture" id=5]
+[ext_resource path="res://walk_bro_2.png" type="Texture" id=6]
+[ext_resource path="res://walk_dad_0.png" type="Texture" id=7]
+[ext_resource path="res://walk_dad_1.png" type="Texture" id=8]
+[ext_resource path="res://walk_dad_2.png" type="Texture" id=9]
+[ext_resource path="res://walk_mom_0.png" type="Texture" id=10]
+[ext_resource path="res://walk_mom_1.png" type="Texture" id=11]
+[ext_resource path="res://walk_mom_2.png" type="Texture" id=12]
+[ext_resource path="res://walk_me_0.png" type="Texture" id=13]
+[ext_resource path="res://walk_me_1.png" type="Texture" id=14]
+[ext_resource path="res://walk_me_2.png" type="Texture" id=15]
+[ext_resource path="res://04b03mod.tres" type="DynamicFont" id=16]
+[ext_resource path="res://04b03mod_large.tres" type="DynamicFont" id=17]
+
+[sub_resource type="Animation" id=1]
+
+resource_name = "test"
+length = 68.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("RichTextLabel:visible_characters")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 5, 30 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0, 0, 420 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("AnimatedSprite2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -8, 296 ), Vector2( 360, 296 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("AnimatedSprite2:playing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("AnimatedSprite:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 35, 40 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -16, 288 ), Vector2( -16, 288 ), Vector2( 320, 288 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("AnimatedSprite:playing")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 35, 40 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("AnimatedSprite3:playing")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 39, 43 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("AnimatedSprite3:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 39, 43 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -16, 288 ), Vector2( -16, 288 ), Vector2( 333, 288 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("AnimatedSprite4:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 43, 46 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -16, 288 ), Vector2( -16, 288 ), Vector2( 365, 288 ) ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("AnimatedSprite4:playing")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 43, 46 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("AnimatedSprite:frame")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 40.1 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 1 ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("AnimatedSprite3:frame")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 43.1 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 2 ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("AnimatedSprite4:frame")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 46.1 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 1 ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("RichTextLabel:modulate")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 0, 46, 48 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("RichTextLabel2:modulate")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 0, 49, 51 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("RichTextLabel3:modulate")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"times": PoolRealArray( 0, 51, 53 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("Polygon2D:color")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/keys = {
+"times": PoolRealArray( 0, 54, 60 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ) ]
+}
+tracks/16/type = "value"
+tracks/16/path = NodePath("RichTextLabel4:modulate")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/keys = {
+"times": PoolRealArray( 0, 61, 63, 65, 67 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="SpriteFrames" id=2]
+
+animations = [ {
+"frames": [ ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 5 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=3]
+
+animations = [ {
+"frames": [ ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 8 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=4]
+
+animations = [ {
+"frames": [ ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 11 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=5]
+
+animations = [ {
+"frames": [ ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 14 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[node name="Node2D" type="Node2D"]
+
+script = ExtResource( 1 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="0"]
+
+root_node = NodePath("..")
+autoplay = "test"
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/test = SubResource( 1 )
+blend_times = [  ]
+_sections_unfolded = [ "Playback Options" ]
+
+[node name="Light2DMoon" parent="." index="1" instance=ExtResource( 2 )]
+
+[node name="TileMap" type="TileMap" parent="." index="2"]
+
+mode = 0
+tile_set = ExtResource( 3 )
+cell_size = Vector2( 16, 16 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( 1245184, 3, 0, 1245185, 3, 0, 1245186, 3, 0, 1245187, 3, 0, 1245188, 3, 0, 1245189, 3, 0, 1245190, 3, 0, 1245191, 3, 0, 1245192, 3, 0, 1245193, 3, 0, 1245194, 3, 0, 1245195, 3, 0, 1245196, 3, 0, 1245197, 3, 0, 1245198, 3, 0, 1245199, 3, 0, 1245200, 3, 0, 1245201, 3, 0, 1245202, 3, 0, 1245203, 3, 0, 1245204, 3, 0, 1245205, 3, 0, 1245206, 3, 0, 1245207, 3, 0, 1245208, 3, 0, 1245209, 3, 0, 1245210, 4, 0 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="AnimatedSprite4" type="AnimatedSprite" parent="." index="3"]
+
+position = Vector2( 263.4, 288 )
+frames = SubResource( 2 )
+animation = "default"
+playing = true
+_sections_unfolded = [ "Transform" ]
+
+[node name="AnimatedSprite3" type="AnimatedSprite" parent="." index="4"]
+
+position = Vector2( 333, 288 )
+frames = SubResource( 3 )
+animation = "default"
+frame = 2
+_sections_unfolded = [ "Transform" ]
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="." index="5"]
+
+position = Vector2( 320, 288 )
+frames = SubResource( 4 )
+animation = "default"
+frame = 1
+_sections_unfolded = [ "Transform" ]
+
+[node name="AnimatedSprite2" type="AnimatedSprite" parent="." index="6"]
+
+position = Vector2( 360, 296 )
+frames = SubResource( 5 )
+animation = "default"
+frame = 3
+_sections_unfolded = [ "Transform" ]
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." index="7"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 32.0
+margin_top = 32.0
+margin_right = 752.0
+margin_bottom = 224.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_fonts/normal_font = ExtResource( 16 )
+bbcode_enabled = false
+bbcode_text = "Alla fine credo di aver imparato a superare gli ostacoli anche da solo.. 
+
+Delle volte addirittura mi sembra piu' semplice andare avanti senza dovermi aprire o chiedere aiuto.. 
+
+Certo stando in silenzio, e' molto facile evitare i problemi e nascondersi alla vita..
+
+Forse pero' e' giunto il momento di crescere per davvero, imparando a ricambiare un po' di quell'amore che mi e' sempre stato dato.."
+visible_characters = -1
+percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "Alla fine credo di aver imparato a superare gli ostacoli anche da solo.. 
+
+Delle volte addirittura mi sembra piu' semplice andare avanti senza dovermi aprire o chiedere aiuto.. 
+
+Certo stando in silenzio, e' molto facile evitare i problemi e nascondersi alla vita..
+
+Forse pero' e' giunto il momento di crescere per davvero, imparando a ricambiare un po' di quell'amore che mi e' sempre stato dato.."
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
+_sections_unfolded = [ "BBCode", "Visibility", "custom_fonts" ]
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="." index="8"]
+
+modulate = Color( 1, 1, 1, 0 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 32.0
+margin_top = 32.0
+margin_right = 271.0
+margin_bottom = 101.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_fonts/normal_font = ExtResource( 17 )
+bbcode_enabled = true
+bbcode_text = "FAMILY"
+visible_characters = -1
+percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "FAMILY"
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
+_sections_unfolded = [ "BBCode", "Visibility", "custom_fonts" ]
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="." index="9"]
+
+modulate = Color( 1, 1, 1, 0 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 32.0
+margin_top = 96.0
+margin_right = 288.0
+margin_bottom = 136.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_fonts/normal_font = ExtResource( 16 )
+bbcode_enabled = false
+bbcode_text = ""
+visible_characters = -1
+percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "grazie per aver giocato.."
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
+_sections_unfolded = [ "Visibility", "custom_fonts" ]
+
+[node name="Polygon2D" type="Polygon2D" parent="." index="10"]
+
+polygon = PoolVector2Array( 0, 320, 1024, 320, 1024, 0, 0, 0 )
+uv = PoolVector2Array(  )
+color = Color( 0, 0, 0, 0 )
+vertex_colors = PoolColorArray(  )
+offset = Vector2( 0, 0 )
+antialiased = false
+texture = null
+texture_offset = Vector2( 0, 0 )
+texture_scale = Vector2( 1, 1 )
+texture_rotation_degrees = 0.0
+invert_enable = false
+invert_border = 100.0
+
+[node name="RichTextLabel4" type="RichTextLabel" parent="." index="11"]
+
+modulate = Color( 1, 1, 1, 0 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 96.0
+margin_right = 1024.0
+margin_bottom = 192.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_fonts/normal_font = ExtResource( 16 )
+bbcode_enabled = true
+bbcode_text = "[center]Design, Code, \"Art\" and \"Music\" 
+
+by
+ 
+mjf89[/center]"
+visible_characters = -1
+percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "Design, Code, \"Art\" and \"Music\" 
+
+by
+ 
+mjf89"
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
+_sections_unfolded = [ "BBCode", "Visibility", "custom_fonts" ]
+
+

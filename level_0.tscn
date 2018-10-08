@@ -1,0 +1,80 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Level.gd" type="Script" id=1]
+[ext_resource path="res://Light2DMoon.tscn" type="PackedScene" id=2]
+[ext_resource path="res://TypeWriter.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Me.tscn" type="PackedScene" id=4]
+[ext_resource path="res://TileSet.tres" type="TileSet" id=5]
+[ext_resource path="res://Goal.tscn" type="PackedScene" id=6]
+
+[node name="Node" type="Node2D" index="0"]
+
+script = ExtResource( 1 )
+description = null
+
+[node name="Light2DMoon" parent="." index="0" instance=ExtResource( 2 )]
+
+[node name="description" parent="." index="1" instance=ExtResource( 3 )]
+
+margin_left = 32.0
+margin_top = 33.0
+margin_right = 992.0
+margin_bottom = 288.0
+bbcode_enabled = true
+bbcode_text = "[color=white]Intro: Me[/color]
+
+[color=#8a8a8a]Sometimes I like to be on my own, I stay alone and I avoid people ...
+I pretend to be strong and independent, but actually I'm not ...
+The truth is, I know that some people will always be there for me ...
+I'm the luckiest guy I know ...
+
+
+[right]FAMILY
+a small game by mjf89[/right][/color]"
+text = "Intro: Me
+
+Sometimes I like to be on my own, I stay alone and I avoid people ...
+I pretend to be strong and independent, but actually I'm not ...
+The truth is, I know that some people will always be there for me ...
+I'm the luckiest guy I know ...
+
+
+FAMILY
+a small game by mjf89"
+_sections_unfolded = [ "BBCode", "Rect", "custom_colors", "custom_fonts" ]
+translation_key = "DSC_LVL_0"
+
+[node name="me" parent="." index="2" instance=ExtResource( 4 )]
+
+position = Vector2( 264, 280 )
+
+[node name="TileMap" type="TileMap" parent="." index="3"]
+
+mode = 0
+tile_set = ExtResource( 5 )
+cell_size = Vector2( 16, 16 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( 1179664, 536870916, 0, 1179665, 3, 0, 1179666, 3, 0, 1179667, 3, 0, 1179668, 3, 0, 1179669, 3, 0, 1179670, 3, 0, 1179671, 3, 0, 1179672, 3, 0, 1179673, 3, 0, 1179674, 3, 0, 1179675, 3, 0, 1179676, 3, 0, 1179677, 3, 0, 1179678, 3, 0, 1179679, 3, 0, 1179680, 3, 0, 1179681, 3, 0, 1179682, 3, 0, 1179683, 3, 0, 1179684, 3, 0, 1179685, 3, 0, 1179686, 3, 0, 1179687, 3, 0, 1179688, 3, 0, 1179689, 3, 0, 1179690, 3, 0, 1179691, 3, 0, 1179692, 3, 0, 1179693, 3, 0, 1179694, 3, 0, 1179695, 4, 0, 1245200, -1073741822, 0, 1245201, 6, 0, 1245202, 6, 0, 1245203, 6, 0, 1245204, 6, 0, 1245205, -1610612730, 0, 1245206, 6, 0, 1245207, 6, 0, 1245208, 6, 0, 1245209, -1610612730, 0, 1245210, 6, 0, 1245211, 6, 0, 1245212, 6, 0, 1245213, -1610612730, 0, 1245214, 6, 0, 1245215, 6, 0, 1245216, 6, 0, 1245217, 6, 0, 1245218, 6, 0, 1245219, -1610612730, 0, 1245220, 6, 0, 1245221, 6, 0, 1245222, 6, 0, 1245223, -1610612730, 0, 1245224, 6, 0, 1245225, 6, 0, 1245226, -1610612730, 0, 1245227, 6, 0, 1245228, 6, 0, 1245229, 6, 0, 1245230, 6, 0, 1245231, -1610612733, 0 )
+_sections_unfolded = [ "Cell" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="goal" parent="." index="4" instance=ExtResource( 6 )]
+
+position = Vector2( 756, 278 )
+_sections_unfolded = [ "Material", "Visibility" ]
+
+

@@ -1,0 +1,220 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://LevelThumbnail.gd" type="Script" id=1]
+[ext_resource path="res://walk_bro_1.png" type="Texture" id=2]
+[ext_resource path="res://walk_dad_1.png" type="Texture" id=3]
+[ext_resource path="res://walk_mom_1.png" type="Texture" id=4]
+[ext_resource path="res://walk_me_1.png" type="Texture" id=5]
+[ext_resource path="res://04b03mod.tres" type="DynamicFont" id=6]
+[ext_resource path="res://level_states.png" type="Texture" id=7]
+
+[node name="LevelThumbnail" type="Container" index="0"]
+
+light_mask = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 96.0
+margin_bottom = 80.0
+rect_min_size = Vector2( 96, 80 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+script = ExtResource( 1 )
+_sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Margin", "Mouse", "Rect", "Transform" ]
+
+[node name="TextureBro" type="TextureRect" parent="." index="0"]
+
+visible = false
+light_mask = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 48.0
+margin_top = 16.0
+margin_right = 80.0
+margin_bottom = 48.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 2 )
+stretch_mode = 0
+
+[node name="TextureDad" type="TextureRect" parent="." index="1"]
+
+visible = false
+light_mask = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 32.0
+margin_top = 16.0
+margin_right = 64.0
+margin_bottom = 48.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 3 )
+stretch_mode = 0
+
+[node name="TextureMom" type="TextureRect" parent="." index="2"]
+
+visible = false
+light_mask = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 16.0
+margin_top = 16.0
+margin_right = 48.0
+margin_bottom = 48.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 4 )
+stretch_mode = 0
+
+[node name="TextureMe" type="TextureRect" parent="." index="3"]
+
+light_mask = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 16.0
+margin_top = 32.0
+margin_right = 32.0
+margin_bottom = 48.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 5 )
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="." index="4"]
+
+light_mask = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 16.0
+margin_top = 48.0
+margin_right = 80.0
+margin_bottom = 64.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 6 )
+text = "level xxx"
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_fonts" ]
+
+[node name="Completed" type="Sprite" parent="." index="5"]
+
+visible = false
+light_mask = 0
+position = Vector2( 16, 16 )
+texture = ExtResource( 7 )
+region_enabled = true
+region_rect = Rect2( 8, 0, 8, 8 )
+_sections_unfolded = [ "Region", "Transform" ]
+
+[node name="Hover" type="Polygon2D" parent="." index="6"]
+
+visible = false
+light_mask = 0
+position = Vector2( 16, 16 )
+polygon = PoolVector2Array( -16, 64, -16, -16, 80, -16, 80, 64 )
+uv = PoolVector2Array(  )
+color = Color( 1, 1, 1, 0.196078 )
+vertex_colors = PoolColorArray(  )
+offset = Vector2( 0, 0 )
+antialiased = false
+texture = null
+texture_offset = Vector2( 0, 0 )
+texture_scale = Vector2( 1, 1 )
+texture_rotation_degrees = 0.0
+invert_enable = false
+invert_border = 100.0
+
+[node name="Button" type="Button" parent="." index="7"]
+
+light_mask = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 96.0
+margin_bottom = 80.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+group = null
+flat = true
+align = 1
+_sections_unfolded = [ "Mouse", "Rect", "Theme" ]
+
+[node name="Locked" type="Polygon2D" parent="." index="8"]
+
+light_mask = 0
+position = Vector2( 16, 16 )
+polygon = PoolVector2Array( -16, 64, -16, -16, 80, -16, 80, 64 )
+uv = PoolVector2Array(  )
+color = Color( 0, 0, 0, 0.470588 )
+vertex_colors = PoolColorArray(  )
+offset = Vector2( 0, 0 )
+antialiased = false
+texture = null
+texture_offset = Vector2( 0, 0 )
+texture_scale = Vector2( 1, 1 )
+texture_rotation_degrees = 0.0
+invert_enable = false
+invert_border = 100.0
+
+[node name="Sprite" type="Sprite" parent="Locked" index="0"]
+
+light_mask = 0
+texture = ExtResource( 7 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 8, 8 )
+_sections_unfolded = [ "Region", "Transform" ]
+
+[connection signal="mouse_entered" from="Button" to="." method="_on_Button_mouse_entered"]
+
+[connection signal="mouse_exited" from="Button" to="." method="_on_Button_mouse_exited"]
+
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
+
+

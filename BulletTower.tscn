@@ -1,0 +1,77 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://BulletTower.gd" type="Script" id=1]
+[ext_resource path="res://BulletTower.png" type="Texture" id=2]
+[ext_resource path="res://sfx_fail.ogg" type="AudioStream" id=3]
+
+[node name="BulletTower" type="StaticBody2D"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+script = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
+TIME_FIRE = 1.0
+N_BULLET = 1
+TIME_DELAY = 0.0
+TIME_WAIT = 0.0
+direction = Vector2( 1, 0 )
+type = null
+
+[node name="Polygon2D" type="Polygon2D" parent="." index="0"]
+
+visible = false
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+uv = PoolVector2Array(  )
+color = Color( 0.266667, 0.266667, 0.266667, 1 )
+vertex_colors = PoolColorArray(  )
+offset = Vector2( 0, 0 )
+antialiased = false
+texture = null
+texture_offset = Vector2( 0, 0 )
+texture_scale = Vector2( 1, 1 )
+texture_rotation_degrees = 0.0
+invert_enable = false
+invert_border = 100.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." index="1"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="Polygon2D2" type="Polygon2D" parent="." index="2"]
+
+visible = false
+polygon = PoolVector2Array( -1, -8, -1, -1, -8, -1, -8, 1, -1, 1, -1, 8, 1, 8, 1, 1, 8, 1, 8, -1, 1, -1, 1, -8 )
+uv = PoolVector2Array(  )
+color = Color( 1, 0, 0, 1 )
+vertex_colors = PoolColorArray(  )
+offset = Vector2( 0, 0 )
+antialiased = false
+texture = null
+texture_offset = Vector2( 0, 0 )
+texture_scale = Vector2( 1, 1 )
+texture_rotation_degrees = 0.0
+invert_enable = false
+invert_border = 100.0
+
+[node name="Sprite" type="Sprite" parent="." index="3"]
+
+texture = ExtResource( 2 )
+
+[node name="SFX" type="Node" parent="." index="4"]
+
+[node name="fire" type="AudioStreamPlayer" parent="SFX" index="0"]
+
+stream = ExtResource( 3 )
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = false
+mix_target = 0
+bus = "SFX"
+
+
